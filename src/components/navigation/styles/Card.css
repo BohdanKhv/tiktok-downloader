@@ -1,0 +1,57 @@
+.card {
+    background: var(--color-main);
+}
+.card-title {
+    padding: 1.5rem;
+    transition: var(--transition-duration);
+    cursor: pointer;
+    background: var(--color-main);
+    position: relative;
+    font-weight: 400;
+    user-select: none;
+    border: 1px solid var(--color-secondary);
+}
+.card-title h3 {
+    text-align: start;
+    padding-right: 10px;
+}
+
+.card-title svg {
+    fill: var(--text-dark);
+    font-weight: bold;
+    stroke: var(--text-dark);
+    stroke-width: 3px;
+    transform: rotate(180deg);
+    transition: var(--transition-duration);
+}
+
+.open-icon.open svg {
+    transform: rotate(90deg);
+}
+
+.card.open .card-title svg {
+    transform: rotate(0deg);
+}
+
+.card-title:active {
+    background: var(--color-secondary-light);
+}
+
+.card-body {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: start;
+    overflow: hidden;
+    transition: var(--transition-duration);
+    /* background: var(--color-secondary-light); */
+}
+
+.card .card-body.open {
+    height: auto;
+    opacity: 1;
+    overflow: visible;
+    padding: 1rem;
+}
